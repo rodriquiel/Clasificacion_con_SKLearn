@@ -32,4 +32,24 @@
 
 ![2](https://user-images.githubusercontent.com/111917955/230813494-e3b4b842-0c48-4d85-b26a-dce23d7470bf.png)
 
+### Dummy classifiers y Arboles de decision
+
+### Para este caso, se utiliza una base de datos sobre datos de automoviles como su millaje por año, el año del modelo, el precio y si fue vendido. Se busca crear un modelo para estimar si un automovil con ciertos atributos será vendido o no. Antes de realizar el modelaje, se realiza un tratamiento sobre los datos para poder trabajar de mejor manera con los mismos.
+
+### Al ver los resultados de las baselines en base a los calsificadores Dummy utilizados se puede concluir que dependiendo del tipo de estrategia al momento de instanciar nuestro DummyClassifier, se tiene una baseline mejor o peor. Cuando se selecciona una baseline la idea es quedarse con una baseline que tenga sentido, entonces 'most_frequent', que tiene un valor más alto seria la adecuada, y este es el valor del clasificador (58%) se debe superar de buena manera. En este caso, se superó en aproximadamente 18%. Entonces se puede concluir que hubo una superación bastante grande y que el modelo es bueno. La contra con la que cuenta este tipo de clasificador es que no tiene ningun grafico para detallar de manera visual lo calculado.
+
+### Se aplica entonces otro clasificador denominado 'Arbol de decision', el cual se aplica por medio de un modelo con datos escalados. Luego de entrenar al modelo con 7500 elementos y se utilizar de prueba 2500 elementos, la tasa de acierto fue de: 78.04 %. Por ultimo, por medio de la libreria 'graphviz' se puede ver la vista del arbol en forma de grafo.
+
+### Arbol de decision con datos escalados
+
+![arbol de decision1](https://user-images.githubusercontent.com/111917955/231894968-c3c2f5c6-1b33-4f06-83f9-ad4f026d0bc1.png)
+
+### Por ultimo, se realiza el modelo pero con datos sin escalar o estandarizar, obteniendo el siguiente grafico
+
+![arbol2](https://user-images.githubusercontent.com/111917955/231895143-d4dc4a36-90e8-461a-a022-82045e3655ab.png)
+
+### Class = Si significa que se vende y Class = No significa que no se vende, y a mayor oscuridad del color, mayor probabilidad de que lo resultado en Class suceda. Se puede ver que para este modelo, la 'edad' del auto no cobra relevancia a la hora de devolver un resultado en base a una consulta
+
+
+
 
